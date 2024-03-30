@@ -1,0 +1,46 @@
+{
+  "name":"@cocomail/node",
+  "version":"1.0.0",
+  "description":"Nodejs library for cocomail.io",
+  "main":"dist/index.js",
+  "types":"dist/index.d.ts",
+  "author":"jonas <jonas@cocomail.com>",
+  "license":"MIT",
+  "private":false,
+  "scripts":{
+    "test":"eslint . --fix",
+    "prepublishOnly":"yarn test && yarn build",
+    "deploy":"yarn publish --access public",
+    "build":"tsc"
+  },
+  "files":[
+    "package.json",
+    "dist",
+    "README.md"
+  ],
+  "repository":{
+    "type":"git",
+    "url":"git+https://github.com/Cocomail/node.git"
+  },
+  "dependencies":{
+    "native-fetch":"^4.0.2",
+    "tslib":"^2.4.0",
+    "undici":"^5.22.1"
+  },
+  "devDependencies":{
+    "@typescript-eslint/eslint-plugin":"^7.4.0",
+    "@typescript-eslint/parser":"^7.4.0",
+    "eslint":"^8.19.0",
+    "prettier":"^2.7.1",
+    "typescript":"^5.4.3"
+  },
+  "publishConfig":{
+    "access":"public",
+    "registry":"https://registry.npmjs.org"
+  },
+  "keywords":[
+    "cocomail",
+    "email automation",
+    "api"
+  ]
+}
